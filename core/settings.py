@@ -32,6 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+AUTH_USER_MODEL = 'users.User'
 
 # Application definition
 DJANGO_APPS = [
@@ -49,6 +50,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     # EXAMPLE: Add example_app
+    'apps.users',
     'core.apps.CoreConfig',
 ]
 
