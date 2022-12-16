@@ -29,5 +29,6 @@ V1_ROUTER.registry.extend(USERS_ROUTER.registry)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include("apps.users.urls")),
     path('api/v1/', include(V1_ROUTER.urls)),
 ]

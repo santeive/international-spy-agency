@@ -5,6 +5,7 @@ Base user model
 from django.db import models
 from django.utils import timezone
 from django .contrib.auth.models import AbstractBaseUser, PermissionsMixin
+from django.contrib.auth.models import UserManager
 
 class User(AbstractBaseUser, PermissionsMixin):
     """
@@ -32,6 +33,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     updated_at = models.DateTimeField(auto_now=True)
 
     USERNAME_FIELD = 'email'
+    objects = UserManager()
 
     def __str__(self) -> str:
         return f'Name : {self.name} and {self.description}'
@@ -56,7 +58,7 @@ class Hitmen(User):
     """
     assigned_manager = models.ForeignKey(
         Manager, 
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,
         blank=True,
         null=True,
         help_text="Manager assigned for this hitmen"

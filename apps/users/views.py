@@ -21,7 +21,7 @@ class AuthViewSet(GenericViewSet):
     serializer_class = HitmenSignupSerializer
 
     @action(detail=False, methods=['post'])
-    def signup(self, request, *args, **kwargs):
+    def register(self, request, *args, **kwargs):
         """
         Signup for hitmen users
         """
