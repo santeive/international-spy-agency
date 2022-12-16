@@ -10,10 +10,24 @@ class User(AbstractBaseUser, PermissionsMixin):
     """
     Extension for the base user
     """
-    name = models.CharField(max_length=30, help_text="Name assigned for this user")
-    email = models.EmailField(unique=True, help_text="Email account for this user")
-    description = models.CharField(max_length=80, help_text="Brief description for this position")
-    is_active = models.BooleanField(default=True, help_text="General status for the user")
+    name = models.CharField(
+        max_length=30, 
+        help_text="Name assigned for this user"
+    )
+    email = models.EmailField(
+        unique=True, 
+        help_text="Email account for this user"
+    )
+    description = models.CharField(
+        max_length=80,
+        blank=True,
+        null=True,
+        help_text="Brief description for this position"
+    )
+    is_active = models.BooleanField(
+        default=True, 
+        help_text="General status for the user"
+    )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -40,7 +54,13 @@ class Hitmen(User):
     """
     Model for the general user (Hitmen)
     """
-    assigned_manager = models.ForeignKey(Manager, on_delete=models.CASCADE, help_text="Manager assigned for this hitmen")
+    assigned_manager = models.ForeignKey(
+        Manager, 
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        help_text="Manager assigned for this hitmen"
+    )
 
     def __str__(self) -> str:
         return super().__str__()
