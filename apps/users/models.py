@@ -40,12 +40,6 @@ class Hitmen(User):
     """
     Model for the general user (Hitmen)
     """
-    STATUS_MISSION = (
-        ('A', 'Assigned'),
-        ('FA', 'Failed Assigned'),
-        ('C', 'Completed'),
-    )
-    status_mission =  models.CharField(max_length=2, choices=STATUS_MISSION, help_text="Status of missson")
     assigned_manager = models.ForeignKey(Manager, on_delete=models.CASCADE, help_text="Manager assigned for this hitmen")
 
     def __str__(self) -> str:
