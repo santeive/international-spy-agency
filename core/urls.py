@@ -22,10 +22,12 @@ from rest_framework.routers import DefaultRouter
 
 # Integrations
 from apps.users.urls import USERS_ROUTER
+from apps.hits.urls import HITS_ROUTER
 
 V1_ROUTER = DefaultRouter()
 
 V1_ROUTER.registry.extend(USERS_ROUTER.registry)
+V1_ROUTER.registry.extend(HITS_ROUTER.registry)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

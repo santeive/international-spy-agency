@@ -15,9 +15,12 @@ class Hit(models.Model):
         ('FA', 'Failed Assigned'),
         ('C', 'Completed'),
     )
-
-    # Se va a utilizar otro tipo de delete
-    assignee = models.ForeignKey(Hitmen, on_delete=models.CASCADE)
+    assignee = models.ForeignKey(
+        Hitmen,
+        blank=True,
+        null=True,
+        on_delete=models.SET_NULL
+    )
     description = models.CharField(
         max_length=50, 
         help_text="Brief description for the hit"
