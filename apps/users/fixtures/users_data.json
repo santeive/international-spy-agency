@@ -1,0 +1,319 @@
+[
+    {
+      "model": "users.user",
+      "pk": 1,
+      "fields": {
+        "password": "admin123-3",
+        "last_login": "2022-12-17T02:47:13Z",
+        "is_superuser": true,
+        "name": "zero",
+        "email": "zero@isa.com",
+        "description": "This is the principal boss of NEST",
+        "is_staff": false,
+        "is_active": true,
+        "created_at": "2022-12-17T02:47:58.863Z",
+        "updated_at": "2022-12-17T02:47:58.863Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "users.user",
+      "pk": 37,
+      "fields": {
+        "password": "admin123-3",
+        "last_login": "2022-12-17T02:48:30Z",
+        "is_superuser": false,
+        "name": "igniz",
+        "email": "igniz@isa.com",
+        "description": "I am one of the managers at NEST",
+        "is_staff": false,
+        "is_active": true,
+        "created_at": "2022-12-17T02:48:59.937Z",
+        "updated_at": "2022-12-17T02:48:59.937Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "users.user",
+      "pk": 38,
+      "fields": {
+        "password": "admin123-3",
+        "last_login": "2022-12-17T02:49:06Z",
+        "is_superuser": false,
+        "name": "Jane",
+        "email": "jane@isa.com",
+        "description": "I am of the managers at NEST",
+        "is_staff": false,
+        "is_active": true,
+        "created_at": "2022-12-17T02:49:33.184Z",
+        "updated_at": "2022-12-17T02:50:37.786Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "users.user",
+      "pk": 39,
+      "fields": {
+        "password": "admin123-3",
+        "last_login": "2022-12-17T02:49:42Z",
+        "is_superuser": false,
+        "name": "Billy",
+        "email": "billy@isa.com",
+        "description": "I am of the managers at NEST",
+        "is_staff": false,
+        "is_active": true,
+        "created_at": "2022-12-17T02:50:06.677Z",
+        "updated_at": "2022-12-17T02:50:28.166Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "users.user",
+      "pk": 40,
+      "fields": {
+        "password": "admin123-3",
+        "last_login": "2022-12-17T02:52:01Z",
+        "is_superuser": false,
+        "name": "hitmen one",
+        "email": "hitmenone@isa.com",
+        "description": "I am the hitmen one",
+        "is_staff": false,
+        "is_active": true,
+        "created_at": "2022-12-17T02:52:49.933Z",
+        "updated_at": "2022-12-17T02:52:49.933Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "users.user",
+      "pk": 41,
+      "fields": {
+        "password": "admin123-3",
+        "last_login": "2022-12-17T02:53:18Z",
+        "is_superuser": false,
+        "name": "hitmen two",
+        "email": "hitmentwo@isa.com",
+        "description": "I am the hitmen two",
+        "is_staff": false,
+        "is_active": true,
+        "created_at": "2022-12-17T02:53:22.396Z",
+        "updated_at": "2022-12-17T02:53:22.397Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "users.user",
+      "pk": 42,
+      "fields": {
+        "password": "admin123-3",
+        "last_login": "2022-12-17T02:53:28Z",
+        "is_superuser": false,
+        "name": "hitmen three",
+        "email": "hitmenthree@isa.com",
+        "description": "I am the hitmen three",
+        "is_staff": false,
+        "is_active": true,
+        "created_at": "2022-12-17T02:54:09.446Z",
+        "updated_at": "2022-12-17T02:54:09.446Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "users.user",
+      "pk": 43,
+      "fields": {
+        "password": "admin123-3",
+        "last_login": "2022-12-17T02:54:15Z",
+        "is_superuser": false,
+        "name": "hitmen four",
+        "email": "hitmenfour@isa.com",
+        "description": "I am the hitmen four",
+        "is_staff": false,
+        "is_active": true,
+        "created_at": "2022-12-17T02:54:42.376Z",
+        "updated_at": "2022-12-17T02:54:42.376Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "users.user",
+      "pk": 44,
+      "fields": {
+        "password": "admin123-3",
+        "last_login": "2022-12-17T02:55:16Z",
+        "is_superuser": false,
+        "name": "hitmen five",
+        "email": "hitmenfive@isa.com",
+        "description": "I am the hitmen five",
+        "is_staff": false,
+        "is_active": true,
+        "created_at": "2022-12-17T02:55:39.940Z",
+        "updated_at": "2022-12-17T02:55:39.940Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "users.user",
+      "pk": 45,
+      "fields": {
+        "password": "admin123-3",
+        "last_login": "2022-12-17T02:55:45Z",
+        "is_superuser": false,
+        "name": "hitmen six",
+        "email": "hitmensix@isa.com",
+        "description": "I am the hitmen six",
+        "is_staff": false,
+        "is_active": true,
+        "created_at": "2022-12-17T02:56:09.098Z",
+        "updated_at": "2022-12-17T02:56:09.098Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "users.user",
+      "pk": 46,
+      "fields": {
+        "password": "admin123-3",
+        "last_login": "2022-12-17T02:56:14Z",
+        "is_superuser": false,
+        "name": "hitmen seven",
+        "email": "hitmenseven@isa.com",
+        "description": "I am the hitmen seven",
+        "is_staff": false,
+        "is_active": true,
+        "created_at": "2022-12-17T02:56:46.060Z",
+        "updated_at": "2022-12-17T02:56:46.060Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "users.user",
+      "pk": 47,
+      "fields": {
+        "password": "admin123-3",
+        "last_login": "2022-12-17T02:57:17Z",
+        "is_superuser": false,
+        "name": "hitmen eigth",
+        "email": "hitmeneigth@isa.com",
+        "description": "I am the hitmen eigth",
+        "is_staff": false,
+        "is_active": true,
+        "created_at": "2022-12-17T02:57:48.199Z",
+        "updated_at": "2022-12-17T02:57:48.199Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "users.user",
+      "pk": 48,
+      "fields": {
+        "password": "admin123-3",
+        "last_login": "2022-12-17T02:57:53Z",
+        "is_superuser": false,
+        "name": "hitmen nine",
+        "email": "hitmennine@isa.com",
+        "description": "I am the hitmen nine",
+        "is_staff": false,
+        "is_active": true,
+        "created_at": "2022-12-17T02:58:19.970Z",
+        "updated_at": "2022-12-17T02:58:19.970Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "users.boss",
+      "pk": 1,
+      "fields": {}
+    },
+    {
+      "model": "users.manager",
+      "pk": 37,
+      "fields": {}
+    },
+    {
+      "model": "users.manager",
+      "pk": 38,
+      "fields": {}
+    },
+    {
+      "model": "users.manager",
+      "pk": 39,
+      "fields": {}
+    },
+    {
+      "model": "users.hitmen",
+      "pk": 40,
+      "fields": {
+        "assigned_manager": null
+      }
+    },
+    {
+      "model": "users.hitmen",
+      "pk": 41,
+      "fields": {
+        "assigned_manager": null
+      }
+    },
+    {
+      "model": "users.hitmen",
+      "pk": 42,
+      "fields": {
+        "assigned_manager": null
+      }
+    },
+    {
+      "model": "users.hitmen",
+      "pk": 43,
+      "fields": {
+        "assigned_manager": null
+      }
+    },
+    {
+      "model": "users.hitmen",
+      "pk": 44,
+      "fields": {
+        "assigned_manager": null
+      }
+    },
+    {
+      "model": "users.hitmen",
+      "pk": 45,
+      "fields": {
+        "assigned_manager": null
+      }
+    },
+    {
+      "model": "users.hitmen",
+      "pk": 46,
+      "fields": {
+        "assigned_manager": null
+      }
+    },
+    {
+      "model": "users.hitmen",
+      "pk": 47,
+      "fields": {
+        "assigned_manager": null
+      }
+    },
+    {
+      "model": "users.hitmen",
+      "pk": 48,
+      "fields": {
+        "assigned_manager": null
+      }
+    }
+]

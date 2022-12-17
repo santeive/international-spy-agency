@@ -7,6 +7,9 @@ from django.utils import timezone
 from django .contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.contrib.auth.models import UserManager
 
+# Manager
+from .managers import UserManager
+
 class User(AbstractBaseUser, PermissionsMixin):
     """
     Extension for the base user
@@ -25,6 +28,11 @@ class User(AbstractBaseUser, PermissionsMixin):
         null=True,
         help_text="Brief description for this position"
     )
+    is_staff = models.BooleanField(('staff_status'),
+        default=False,
+        help_text=('Designates whether the user can log into this admin site.'),
+    )
+
     is_active = models.BooleanField(
         default=True, 
         help_text="General status for the user"
@@ -33,6 +41,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     updated_at = models.DateTimeField(auto_now=True)
 
     USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+
     objects = UserManager()
 
     def __str__(self) -> str:
