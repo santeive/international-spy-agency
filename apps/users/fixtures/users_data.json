@@ -1,319 +1,337 @@
 [
-    {
-      "model": "users.user",
-      "pk": 1,
-      "fields": {
-        "password": "admin123-3",
-        "last_login": "2022-12-17T02:47:13Z",
-        "is_superuser": true,
-        "name": "zero",
-        "email": "zero@isa.com",
-        "description": "This is the principal boss of NEST",
-        "is_staff": false,
-        "is_active": true,
-        "created_at": "2022-12-17T02:47:58.863Z",
-        "updated_at": "2022-12-17T02:47:58.863Z",
-        "groups": [],
-        "user_permissions": []
-      }
-    },
-    {
-      "model": "users.user",
-      "pk": 37,
-      "fields": {
-        "password": "admin123-3",
-        "last_login": "2022-12-17T02:48:30Z",
-        "is_superuser": false,
-        "name": "igniz",
-        "email": "igniz@isa.com",
-        "description": "I am one of the managers at NEST",
-        "is_staff": false,
-        "is_active": true,
-        "created_at": "2022-12-17T02:48:59.937Z",
-        "updated_at": "2022-12-17T02:48:59.937Z",
-        "groups": [],
-        "user_permissions": []
-      }
-    },
-    {
-      "model": "users.user",
-      "pk": 38,
-      "fields": {
-        "password": "admin123-3",
-        "last_login": "2022-12-17T02:49:06Z",
-        "is_superuser": false,
-        "name": "Jane",
-        "email": "jane@isa.com",
-        "description": "I am of the managers at NEST",
-        "is_staff": false,
-        "is_active": true,
-        "created_at": "2022-12-17T02:49:33.184Z",
-        "updated_at": "2022-12-17T02:50:37.786Z",
-        "groups": [],
-        "user_permissions": []
-      }
-    },
-    {
-      "model": "users.user",
-      "pk": 39,
-      "fields": {
-        "password": "admin123-3",
-        "last_login": "2022-12-17T02:49:42Z",
-        "is_superuser": false,
-        "name": "Billy",
-        "email": "billy@isa.com",
-        "description": "I am of the managers at NEST",
-        "is_staff": false,
-        "is_active": true,
-        "created_at": "2022-12-17T02:50:06.677Z",
-        "updated_at": "2022-12-17T02:50:28.166Z",
-        "groups": [],
-        "user_permissions": []
-      }
-    },
-    {
-      "model": "users.user",
-      "pk": 40,
-      "fields": {
-        "password": "admin123-3",
-        "last_login": "2022-12-17T02:52:01Z",
-        "is_superuser": false,
-        "name": "hitmen one",
-        "email": "hitmenone@isa.com",
-        "description": "I am the hitmen one",
-        "is_staff": false,
-        "is_active": true,
-        "created_at": "2022-12-17T02:52:49.933Z",
-        "updated_at": "2022-12-17T02:52:49.933Z",
-        "groups": [],
-        "user_permissions": []
-      }
-    },
-    {
-      "model": "users.user",
-      "pk": 41,
-      "fields": {
-        "password": "admin123-3",
-        "last_login": "2022-12-17T02:53:18Z",
-        "is_superuser": false,
-        "name": "hitmen two",
-        "email": "hitmentwo@isa.com",
-        "description": "I am the hitmen two",
-        "is_staff": false,
-        "is_active": true,
-        "created_at": "2022-12-17T02:53:22.396Z",
-        "updated_at": "2022-12-17T02:53:22.397Z",
-        "groups": [],
-        "user_permissions": []
-      }
-    },
-    {
-      "model": "users.user",
-      "pk": 42,
-      "fields": {
-        "password": "admin123-3",
-        "last_login": "2022-12-17T02:53:28Z",
-        "is_superuser": false,
-        "name": "hitmen three",
-        "email": "hitmenthree@isa.com",
-        "description": "I am the hitmen three",
-        "is_staff": false,
-        "is_active": true,
-        "created_at": "2022-12-17T02:54:09.446Z",
-        "updated_at": "2022-12-17T02:54:09.446Z",
-        "groups": [],
-        "user_permissions": []
-      }
-    },
-    {
-      "model": "users.user",
-      "pk": 43,
-      "fields": {
-        "password": "admin123-3",
-        "last_login": "2022-12-17T02:54:15Z",
-        "is_superuser": false,
-        "name": "hitmen four",
-        "email": "hitmenfour@isa.com",
-        "description": "I am the hitmen four",
-        "is_staff": false,
-        "is_active": true,
-        "created_at": "2022-12-17T02:54:42.376Z",
-        "updated_at": "2022-12-17T02:54:42.376Z",
-        "groups": [],
-        "user_permissions": []
-      }
-    },
-    {
-      "model": "users.user",
-      "pk": 44,
-      "fields": {
-        "password": "admin123-3",
-        "last_login": "2022-12-17T02:55:16Z",
-        "is_superuser": false,
-        "name": "hitmen five",
-        "email": "hitmenfive@isa.com",
-        "description": "I am the hitmen five",
-        "is_staff": false,
-        "is_active": true,
-        "created_at": "2022-12-17T02:55:39.940Z",
-        "updated_at": "2022-12-17T02:55:39.940Z",
-        "groups": [],
-        "user_permissions": []
-      }
-    },
-    {
-      "model": "users.user",
-      "pk": 45,
-      "fields": {
-        "password": "admin123-3",
-        "last_login": "2022-12-17T02:55:45Z",
-        "is_superuser": false,
-        "name": "hitmen six",
-        "email": "hitmensix@isa.com",
-        "description": "I am the hitmen six",
-        "is_staff": false,
-        "is_active": true,
-        "created_at": "2022-12-17T02:56:09.098Z",
-        "updated_at": "2022-12-17T02:56:09.098Z",
-        "groups": [],
-        "user_permissions": []
-      }
-    },
-    {
-      "model": "users.user",
-      "pk": 46,
-      "fields": {
-        "password": "admin123-3",
-        "last_login": "2022-12-17T02:56:14Z",
-        "is_superuser": false,
-        "name": "hitmen seven",
-        "email": "hitmenseven@isa.com",
-        "description": "I am the hitmen seven",
-        "is_staff": false,
-        "is_active": true,
-        "created_at": "2022-12-17T02:56:46.060Z",
-        "updated_at": "2022-12-17T02:56:46.060Z",
-        "groups": [],
-        "user_permissions": []
-      }
-    },
-    {
-      "model": "users.user",
-      "pk": 47,
-      "fields": {
-        "password": "admin123-3",
-        "last_login": "2022-12-17T02:57:17Z",
-        "is_superuser": false,
-        "name": "hitmen eigth",
-        "email": "hitmeneigth@isa.com",
-        "description": "I am the hitmen eigth",
-        "is_staff": false,
-        "is_active": true,
-        "created_at": "2022-12-17T02:57:48.199Z",
-        "updated_at": "2022-12-17T02:57:48.199Z",
-        "groups": [],
-        "user_permissions": []
-      }
-    },
-    {
-      "model": "users.user",
-      "pk": 48,
-      "fields": {
-        "password": "admin123-3",
-        "last_login": "2022-12-17T02:57:53Z",
-        "is_superuser": false,
-        "name": "hitmen nine",
-        "email": "hitmennine@isa.com",
-        "description": "I am the hitmen nine",
-        "is_staff": false,
-        "is_active": true,
-        "created_at": "2022-12-17T02:58:19.970Z",
-        "updated_at": "2022-12-17T02:58:19.970Z",
-        "groups": [],
-        "user_permissions": []
-      }
-    },
-    {
-      "model": "users.boss",
-      "pk": 1,
-      "fields": {}
-    },
-    {
-      "model": "users.manager",
-      "pk": 37,
-      "fields": {}
-    },
-    {
-      "model": "users.manager",
-      "pk": 38,
-      "fields": {}
-    },
-    {
-      "model": "users.manager",
-      "pk": 39,
-      "fields": {}
-    },
-    {
-      "model": "users.hitmen",
-      "pk": 40,
-      "fields": {
-        "assigned_manager": null
-      }
-    },
-    {
-      "model": "users.hitmen",
-      "pk": 41,
-      "fields": {
-        "assigned_manager": null
-      }
-    },
-    {
-      "model": "users.hitmen",
-      "pk": 42,
-      "fields": {
-        "assigned_manager": null
-      }
-    },
-    {
-      "model": "users.hitmen",
-      "pk": 43,
-      "fields": {
-        "assigned_manager": null
-      }
-    },
-    {
-      "model": "users.hitmen",
-      "pk": 44,
-      "fields": {
-        "assigned_manager": null
-      }
-    },
-    {
-      "model": "users.hitmen",
-      "pk": 45,
-      "fields": {
-        "assigned_manager": null
-      }
-    },
-    {
-      "model": "users.hitmen",
-      "pk": 46,
-      "fields": {
-        "assigned_manager": null
-      }
-    },
-    {
-      "model": "users.hitmen",
-      "pk": 47,
-      "fields": {
-        "assigned_manager": null
-      }
-    },
-    {
-      "model": "users.hitmen",
-      "pk": 48,
-      "fields": {
-        "assigned_manager": null
-      }
+  {
+    "model": "users.user",
+    "pk": 49,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$oLxeWC9wym6HD0wgjdqItW$sNBlnr1vr2ytGzuzLdSTD3/TyTL6K3yiqsv0sHBglbE=",
+      "last_login": "2022-12-17T03:36:18.264Z",
+      "is_superuser": true,
+      "name": "",
+      "email": "boss@isa.com",
+      "description": null,
+      "is_staff": true,
+      "is_active": true,
+      "created_at": "2022-12-17T03:20:32.855Z",
+      "updated_at": "2022-12-17T03:20:32.855Z",
+      "groups": [],
+      "user_permissions": []
     }
-]
+  },
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$NIR6T1QGEFNRwN6L07mFWf$z+U05KBOqLS9tKQmdHXFKKgXyY5MhpVAyr+eO0uKnF4=",
+      "last_login": null,
+      "is_superuser": false,
+      "name": "Zero",
+      "email": "zero@isa.com",
+      "description": "The boss Zero of NEST",
+      "is_staff": true,
+      "is_active": true,
+      "created_at": "2022-12-17T04:45:17.453Z",
+      "updated_at": "2022-12-17T04:45:17.453Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$lRA3b9ZDImY0SXQz4bKd1B$MGFxCm5T23xxVUe+yU9nE5YLSTMAxzhsYcLd6v+Zjm8=",
+      "last_login": null,
+      "is_superuser": false,
+      "name": "Igniz",
+      "email": "igniz@isa.com",
+      "description": "Member of NEST",
+      "is_staff": true,
+      "is_active": true,
+      "created_at": "2022-12-17T04:46:00.147Z",
+      "updated_at": "2022-12-17T04:46:00.147Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$cxT4OQSs8Z2g646u6ZS7Ii$A10ZC1iNdrmULWhEY85IF89/tlw7KxZUP+qn5WTr2dQ=",
+      "last_login": null,
+      "is_superuser": false,
+      "name": "Jeane",
+      "email": "jeane@isa.com",
+      "description": "Member of NEST",
+      "is_staff": true,
+      "is_active": true,
+      "created_at": "2022-12-17T04:46:39.034Z",
+      "updated_at": "2022-12-17T04:46:39.034Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$14QMpA1NqbAD1j7kiszqaO$bFXrz/vRilwEytgkJYPs0qRA0a6+g4toJUgxQtHiV9Q=",
+      "last_login": null,
+      "is_superuser": false,
+      "name": "Billy",
+      "email": "billy@isa.com",
+      "description": "Member of NEST",
+      "is_staff": true,
+      "is_active": true,
+      "created_at": "2022-12-17T04:47:22.103Z",
+      "updated_at": "2022-12-17T04:47:22.103Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 55,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$mbibhaVfpLHWhtDBmBbHH4$BZ/cIalxbnuzuN+Psau7JNlOEX9tHoQwg+DeTkb416I=",
+      "last_login": null,
+      "is_superuser": false,
+      "name": "hitmen one",
+      "email": "hitone@isa.com",
+      "description": "Member of NEST",
+      "is_staff": true,
+      "is_active": true,
+      "created_at": "2022-12-17T04:48:12.184Z",
+      "updated_at": "2022-12-17T04:48:12.184Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 56,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$j4hjQ8UwHdThjzmRJtmjlQ$cUH7wYKCvalhsQdfR7n0nxdhqQXaiFHaiXxzR8t3uyA=",
+      "last_login": null,
+      "is_superuser": false,
+      "name": "hitmen two",
+      "email": "hittwo@isa.com",
+      "description": "Member of NEST",
+      "is_staff": true,
+      "is_active": true,
+      "created_at": "2022-12-17T04:48:54.810Z",
+      "updated_at": "2022-12-17T04:48:54.810Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 57,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$wrzPSmV2qUITfwbQaeMjfh$bJ990e0CqYnS8TavibpjG3Ah91Y/+Mh65OE/z2IYZWw=",
+      "last_login": null,
+      "is_superuser": false,
+      "name": "hitmen three",
+      "email": "hitthree@isa.com",
+      "description": "Member of NEST",
+      "is_staff": true,
+      "is_active": true,
+      "created_at": "2022-12-17T04:49:19.598Z",
+      "updated_at": "2022-12-17T04:49:19.598Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 58,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$uFphEw2yIE5H0X12eYWyBq$lOBrwWn2aiMENPGSal0bDmWfeCSsvdavJNlgSd2L8bA=",
+      "last_login": null,
+      "is_superuser": false,
+      "name": "hitmen four",
+      "email": "hitfour@isa.com",
+      "description": "Member of NEST",
+      "is_staff": true,
+      "is_active": true,
+      "created_at": "2022-12-17T04:49:46.723Z",
+      "updated_at": "2022-12-17T04:49:46.723Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 59,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$UUzA9qWlK9Nk9ku5GENmSU$icrC23SUceAnjaytfoJlJ65xNyn/2BxLYmwTRgnABSs=",
+      "last_login": null,
+      "is_superuser": false,
+      "name": "hitmen five",
+      "email": "hitfive@isa.com",
+      "description": "Member of NEST",
+      "is_staff": true,
+      "is_active": true,
+      "created_at": "2022-12-17T04:50:15.701Z",
+      "updated_at": "2022-12-17T04:50:15.701Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 60,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$rUC7fGU79duvFHtps2Ly7h$iv5qqa4ES8DHAOY2TjvLEsT029DE8WDOsR0w1qAGfYA=",
+      "last_login": null,
+      "is_superuser": false,
+      "name": "hitmen six",
+      "email": "hitsix@isa.com",
+      "description": "Member of NEST",
+      "is_staff": true,
+      "is_active": true,
+      "created_at": "2022-12-17T04:50:39.038Z",
+      "updated_at": "2022-12-17T04:50:39.038Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 61,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$fuK2t1Ho2q81QrK1AHjYeH$03ucC0Rioo780JsJlXwnb+aCoib7OYAmpNXpCEYfABw=",
+      "last_login": null,
+      "is_superuser": false,
+      "name": "hitmen seven",
+      "email": "hitseven@isa.com",
+      "description": "Member of NEST",
+      "is_staff": true,
+      "is_active": true,
+      "created_at": "2022-12-17T04:51:38.719Z",
+      "updated_at": "2022-12-17T04:51:38.719Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 62,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$24zncVscjj4ymZHJcEXEd5$0DRcs5k1kxPRA1UCcintu5C9h2vCqwrZfcQC46zVDvE=",
+      "last_login": null,
+      "is_superuser": false,
+      "name": "hitmen eigth",
+      "email": "hiteigth@isa.com",
+      "description": "Member of NEST",
+      "is_staff": true,
+      "is_active": true,
+      "created_at": "2022-12-17T04:52:13.493Z",
+      "updated_at": "2022-12-17T04:52:13.493Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 63,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$4b77Qifl4GAbBk1mpVS3fQ$2kNC5g9C3fsuZdYXdii8IewCxJnVwHhOTOm1/jtII2s=",
+      "last_login": null,
+      "is_superuser": false,
+      "name": "hitmen nine",
+      "email": "hitnine@isa.com",
+      "description": "Member of NEST",
+      "is_staff": true,
+      "is_active": true,
+      "created_at": "2022-12-17T04:52:39.904Z",
+      "updated_at": "2022-12-17T04:52:39.904Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.boss",
+    "pk": 1,
+    "fields": {}
+  },
+  {
+    "model": "users.manager",
+    "pk": 2,
+    "fields": {}
+  },
+  {
+    "model": "users.manager",
+    "pk": 3,
+    "fields": {}
+  },
+  {
+    "model": "users.manager",
+    "pk": 4,
+    "fields": {}
+  },
+  {
+    "model": "users.hitmen",
+    "pk": 55,
+    "fields": {
+      "assigned_manager": null
+    }
+  },
+  {
+    "model": "users.hitmen",
+    "pk": 56,
+    "fields": {
+      "assigned_manager": null
+    }
+  },
+  {
+    "model": "users.hitmen",
+    "pk": 57,
+    "fields": {
+      "assigned_manager": null
+    }
+  },
+  {
+    "model": "users.hitmen",
+    "pk": 58,
+    "fields": {
+      "assigned_manager": null
+    }
+  },
+  {
+    "model": "users.hitmen",
+    "pk": 59,
+    "fields": {
+      "assigned_manager": null
+    }
+  },
+  {
+    "model": "users.hitmen",
+    "pk": 60,
+    "fields": {
+      "assigned_manager": null
+    }
+  },
+  {
+    "model": "users.hitmen",
+    "pk": 61,
+    "fields": {
+      "assigned_manager": null
+    }
+  },
+  {
+    "model": "users.hitmen",
+    "pk": 62,
+    "fields": {
+      "assigned_manager": null
+    }
+  },
+  {
+    "model": "users.hitmen",
+    "pk": 63,
+    "fields": {
+      "assigned_manager": null
+    }
+  }
+  ]

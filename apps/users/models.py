@@ -29,7 +29,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         help_text="Brief description for this position"
     )
     is_staff = models.BooleanField(('staff_status'),
-        default=False,
+        default=True,
         help_text=('Designates whether the user can log into this admin site.'),
     )
 
