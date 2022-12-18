@@ -6,6 +6,10 @@ This README file covers local (development) and testing directions.
 
 ## Develpoment
 
+You can import de Insomnia file to test the endpoint with a prepared environment
+
+**INSOMNIA_ISA_PROJECT.json**
+
 ### Run with docker
 
 #### Requirements
@@ -63,6 +67,11 @@ docker volume rm justo-backend-challenge_postgres_data
 
 ```bash
 make createsuperuser
+```
+
+#### You can check the documentation at:
+```
+http://0.0.0.0:8000/docs/
 ```
 
 Once the data is loaded, the users are these. 
