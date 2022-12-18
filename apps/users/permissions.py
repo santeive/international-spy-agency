@@ -12,11 +12,11 @@ class UserPermission(BasePermission):
     def has_permission(self, request, view):
         if not request.user.is_authenticated:
             return False
-
+    
         if view.action == 'assign_manager':
             return request.user.is_superuser
 
-        if view.action in ['list', 'retrieve', 'update', 'partial_update']:
+        if view.action in ['list', 'retrieve', 'patch', 'partial_update', 'patch', 'update']:
             return request.user.is_superuser or request.user.is_manager
 
         return False

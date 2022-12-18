@@ -62,7 +62,7 @@ class AuthViewSet(GenericViewSet):
 
 
 class HitmenViewSet(GenericViewSet, ListModelMixin, 
-    RetrieveModelMixin, DestroyModelMixin, UpdateModelMixin):
+    RetrieveModelMixin, DestroyModelMixin):
     """
     Viewset for Hitmen actions
     """
@@ -77,6 +77,22 @@ class HitmenViewSet(GenericViewSet, ListModelMixin,
         else: #Boss
             queryset = super(HitmenViewSet, self).get_queryset()
         return queryset
+
+    def patch(self, request, pk, *args, **kwargs):
+        """
+        Update de hitmen based on its is_active status
+        """
+        hitmen = Hitmen.objects.get(id=pk)
+        if not hitmen.is_active:
+            return Response(
+                data={"message": "Inactive users canot be editted"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        hitmen_serializer = HitmenSerializer(hitmen, data=request.data, partial=True)
+
+        if hitmen_serializer.is_valid():
+            hitmen_serializer.save()
+        return Response(data=hitmen_serializer.data, status=status.HTTP_200_OK)
 
     @action(detail=False, methods=['post'])
     def assign_manager(self, request, *args, **kwargs):

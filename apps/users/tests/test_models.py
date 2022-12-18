@@ -13,7 +13,6 @@ class UserModelTest(TestCase):
     def setUpTestData(cls):
         UserFactory()
         cls.user = User.objects.first()
-        print("User: ", cls.user)
 
     def test_user_fields_exists(self):
         """

@@ -33,8 +33,6 @@ class HitsViewSet(GenericViewSet, ListModelMixin,
     def get_queryset(self):
         user = self.request.user
         if user.is_manager:
-            print("User: ", user)
-            print("User: ", user.is_manager)
             queryset = Hit.objects.filter(Q(assignment_creator=user) | Q(assignee=user))
         elif user.is_hitmen:
             queryset = Hit.objects.filter(assignee = user)
@@ -56,7 +54,6 @@ class HitsViewSet(GenericViewSet, ListModelMixin,
             request_data['assignee'] = assignee.pk
             request_data['assignment_creator'] = assignment_creator.pk
 
-            print("Request Data: ", request_data)
             hit_serializer = HitCreateSerializer(data=request_data)
             hit_serializer.is_valid(raise_exception=True)
 
