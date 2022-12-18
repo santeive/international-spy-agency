@@ -4,7 +4,7 @@ Users app url
 
 # Django
 from django.urls import path
-from .views import AuthViewSet
+from .views import AuthViewSet, HitmenViewSet
 
 # Rest framework
 from rest_framework.routers import SimpleRouter
@@ -16,6 +16,7 @@ from rest_framework_simplejwt.views import (
 USERS_ROUTER = SimpleRouter()
 
 USERS_ROUTER.register(r'auth', AuthViewSet)
+USERS_ROUTER.register(r'hitmen', HitmenViewSet)
 
 urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),

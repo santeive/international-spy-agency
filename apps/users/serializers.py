@@ -21,9 +21,15 @@ class HitmenSignupSerializer(UserBaseSerializer):
     class Meta(UserBaseSerializer.Meta):
         fields = UserBaseSerializer.Meta.fields + ('password',)
 
-class HitmenSerializer(UserBaseSerializer):
+class HitmenSerializer(serializers.ModelSerializer):
     """
     Serializer for Hitmen creation
     """
     class Meta(serializers.ModelSerializer):
-        fields = ('id', 'name', 'email', 'description')
+        model = Hitmen
+        fields = (
+            'id', 'name', 'email', 
+            'description', 'is_hitmen', 
+            'is_active', 'created_at', 
+            'updated_at', 'assigned_manager'
+        )

@@ -9,7 +9,8 @@ from rest_framework.decorators import action
 from rest_framework.mixins import (
     ListModelMixin, 
     RetrieveModelMixin,
-    DestroyModelMixin
+    DestroyModelMixin,
+    UpdateModelMixin
 )
 from django.db.models import Q
 # Integgrations
@@ -19,7 +20,8 @@ from .serializers import HitSerializer
 from apps.users.serializers import UserBaseSerializer
 from rest_framework.permissions import IsAuthenticated
 
-class HitsViewSet(GenericViewSet, ListModelMixin, RetrieveModelMixin):
+class HitsViewSet(GenericViewSet, ListModelMixin, 
+    RetrieveModelMixin, DestroyModelMixin, UpdateModelMixin):
     permission_classes = [IsAuthenticated]
     queryset = Hit.objects.all()
     serializer_class = HitSerializer
