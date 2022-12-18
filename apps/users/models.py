@@ -28,15 +28,27 @@ class User(AbstractBaseUser, PermissionsMixin):
         null=True,
         help_text="Brief description for this position"
     )
+
     is_staff = models.BooleanField(('staff_status'),
         default=True,
         help_text=('Designates whether the user can log into this admin site.'),
+    )
+
+    is_manager = models.BooleanField(
+        default=False, 
+        help_text="Role fot he Manager"
+    )
+    
+    is_hitmen = models.BooleanField(
+        default=False, 
+        help_text="Rol for the Hitmen"
     )
 
     is_active = models.BooleanField(
         default=True, 
         help_text="General status for the user"
     )
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -48,29 +60,18 @@ class User(AbstractBaseUser, PermissionsMixin):
     def __str__(self) -> str:
         return f'Name : {self.name} and {self.description}'
 
-class Boss(User):
-    """
-    Model for the Boss
-    """
-    def __str__(self) -> str:
-        return super().__str__()
-
-class Manager(User):
-    """
-    Model for the Manager
-    """
-    def __str__(self) -> str:
-        return super().__str__()
 
 class Hitmen(User):
     """
     Model for the general user (Hitmen)
     """
+
     assigned_manager = models.ForeignKey(
-        Manager, 
+        User, 
         on_delete=models.SET_NULL,
         blank=True,
         null=True,
+        related_name="assiger",
         help_text="Manager assigned for this hitmen"
     )
 

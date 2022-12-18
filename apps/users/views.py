@@ -2,7 +2,7 @@
 User and ApiUser views
 """
 
-from .models import Hitmen, Manager, Boss, User
+from .models import Hitmen, User
 from .serializers import HitmenSignupSerializer, UserBaseSerializer
 
 #restframework
@@ -34,6 +34,7 @@ class AuthViewSet(GenericViewSet):
         # Create hitmen with validated data, set password and save
         user = Hitmen.objects.create(**serialized_hitmen.validated_data)
         user.set_password(request.data['password'])
+        user.is_hitmen = True
         user.save()
 
         # Get access and refresh token

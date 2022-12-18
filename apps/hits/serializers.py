@@ -12,4 +12,4 @@ class HitSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Hit
-        fields = ('id', 'assignee', 'description', 'target_name', 'status_mission')
+        fields = ('id', 'assignee', 'description', 'target_name', 'status_mission','assignment_creator')

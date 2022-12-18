@@ -5,7 +5,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
 from django.core.exceptions import ValidationError
 
-from .models import User, Boss, Manager, Hitmen
+from .models import User, Hitmen
 
 class UserCreationForm(forms.ModelForm):
     """A form for creating new users. Includes all the required
@@ -15,7 +15,7 @@ class UserCreationForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('name', 'email', 'description')
+        fields = ('name', 'email', 'description', 'is_manager', 'is_hitmen')
 
     def clean_password2(self):
         # Check that the two password entries match
@@ -43,7 +43,7 @@ class UserChangeForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('name', 'email', 'password', 'description', 'is_active')
+        fields = ('name', 'email', 'password', 'description', 'is_active', 'is_hitmen')
 
 class UserAdmin(BaseUserAdmin):
     # The forms to add and change user instances
@@ -53,10 +53,10 @@ class UserAdmin(BaseUserAdmin):
     # The fields to be used in displaying the User model.
     # These override the definitions on the base UserAdmin
     # that reference specific fields on auth.User.
-    list_display = ('name', 'email', 'description')
+    list_display = ('id', 'name', 'email', 'description', 'is_manager', 'is_hitmen', 'is_superuser','is_active','is_staff')
     list_filter = ('email',)
     fieldsets = (
-        (None, {'fields': ('name', 'email', 'password')}),
+        (None, {'fields': ('name', 'email', 'password','is_manager', 'is_hitmen','is_active',)}),
         ('Personal info', {'fields': ('description',)}),
         ('Permissions', {'fields': ()}),
     )
@@ -74,22 +74,3 @@ class UserAdmin(BaseUserAdmin):
 
     # Now register the new UserAdmin...
 admin.site.register(User, UserAdmin)
-
-# Admin for Boss
-class BossAdmin(BaseUserAdmin):
-    pass
-
-admin.site.register(Boss, UserAdmin)
-
-
-# Admin for Manager
-class ManagerAdmin(BaseUserAdmin):
-    pass
-
-admin.site.register(Manager, UserAdmin)
-
-# Admin for Hitmen
-class HitmenAdmin(BaseUserAdmin):
-    pass
-
-admin.site.register(Hitmen, UserAdmin)

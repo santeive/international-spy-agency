@@ -1,7 +1,7 @@
 """
 Factories for user models
 """
-from .models import User, Hitmen, Manager, Boss
+from .models import User, Hitmen
 import factory
 
 

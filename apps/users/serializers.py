@@ -2,7 +2,7 @@
 User serializers
 """
 
-from .models import Hitmen, Manager, Boss, User
+from .models import Hitmen, User
 from rest_framework import serializers, validators
 
 class UserBaseSerializer(serializers.ModelSerializer):

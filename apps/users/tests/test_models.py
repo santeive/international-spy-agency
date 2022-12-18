@@ -3,7 +3,7 @@ Test for model users
 """
 from django.test import TestCase
 from apps.users.factories import UserFactory
-from apps.users.models import User, Hitmen, Manager, Boss
+from apps.users.models import User, Hitmen
 
 class UserModelTest(TestCase):
     """

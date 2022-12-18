@@ -11,18 +11,28 @@ from rest_framework.mixins import (
     RetrieveModelMixin,
     DestroyModelMixin
 )
+from django.db.models import Q
 # Integgrations
 from apps.users.models import User, Hitmen
 from .models import Hit
 from .serializers import HitSerializer
 from apps.users.serializers import UserBaseSerializer
+from rest_framework.permissions import IsAuthenticated
 
 class HitsViewSet(GenericViewSet, ListModelMixin, RetrieveModelMixin):
+    permission_classes = [IsAuthenticated]
     queryset = Hit.objects.all()
     serializer_class = HitSerializer
 
     def get_queryset(self):
-        queryset = super(HitsViewSet, self).get_queryset()
+        user = self.request.user
+        if user.is_manager:
+            queryset = Hit.objects.filter(Q(assignment_creator=user) | Q(assignee=user))
+        elif user.is_hitmen:
+            queryset = Hit.objects.filter(assignee = user)
+        else: # Boss
+            queryset = super(HitsViewSet, self).get_queryset()
+        
         return queryset
 
     def create(self, request, *args, **kwargs):
@@ -30,9 +40,11 @@ class HitsViewSet(GenericViewSet, ListModelMixin, RetrieveModelMixin):
         Create hit action
         """
         request_data = request.data
-        assignee = Hitmen.objects.get(id=request_data['assignee'])
+        assignment_creator = self.request.user
+        assignee = User.objects.get(id=request_data['assignee'])
 
-        request_data['assignee'] = assignee
+        request_data['assignee'] = assignee.id
+        request_data['assignment_creator'] = assignment_creator.id
         hit_serializer = self.get_serializer(data=request_data)
         hit_serializer.is_valid(raise_exception=True)
 
