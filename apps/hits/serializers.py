@@ -16,3 +16,11 @@ class HitSerializer(serializers.ModelSerializer):
     class Meta:
         model = Hit
         fields = ('id', 'assignee', 'description', 'target_name', 'status_mission', 'assignment_creator')
+
+class HitCreateSerializer(serializers.ModelSerializer):
+    """
+    Serializer class for it model
+    """
+    class Meta:
+        model = Hit
+        fields = ('id', 'assignee', 'description', 'target_name', 'status_mission', 'assignment_creator')
