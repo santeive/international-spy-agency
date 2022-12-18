@@ -13,7 +13,12 @@ class UserFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = User
 
-    name = "Zero"
-    email = "zero@isa.com"
+    name = "boss"
+    email = "boss@isa.com"
     description = "This is an special hitmen"
+    password = "admin123-3"
     is_active = True
+    is_staff = True
+    is_manager = False
+    is_hitmen = False
+    is_superuser = True

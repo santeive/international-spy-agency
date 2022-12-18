@@ -31,7 +31,7 @@ make build
 make up
 ```
 
-#### 3. Run migrations
+#### 3. Open a new terminal and Run migrations
 
 ```bash
 make migrate
