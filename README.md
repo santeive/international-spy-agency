@@ -2,7 +2,7 @@
 Welcome to the international spy agency.
 In this document you will know all the necesary steps for up and running your platform
 
-This README file covers local (development) and testing directions.
+This README file covers local development and testing directions.
 
 ## Develpoment
 
@@ -15,7 +15,7 @@ You can import de Insomnia file to test the endpoint with a prepared environment
 #### Requirements
 
 - Install [Docker and Docker compose](https://docs.docker.com/compose/install/)
-- Notice docker-related files are placed under `local` folder.
+- Notice docker-related files are placed under the root of the project.
 
 #### Create an `.env` file in the root of the project
 
