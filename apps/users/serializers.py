@@ -12,7 +12,7 @@ class UserBaseSerializer(serializers.ModelSerializer):
 
     class Meta:
         model= User
-        fields = ('name', 'email', 'description')
+        fields = ('id','name',)
 
 class HitmenSignupSerializer(UserBaseSerializer):
     """
@@ -25,6 +25,7 @@ class HitmenSerializer(serializers.ModelSerializer):
     """
     Serializer for Hitmen creation
     """
+    assigned_manager = UserBaseSerializer(many=False, read_only=True)
     class Meta(serializers.ModelSerializer):
         model = Hitmen
         fields = (
