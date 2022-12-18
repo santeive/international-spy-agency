@@ -86,14 +86,18 @@ class HitmenViewSet(GenericViewSet, ListModelMixin,
         """
         hitmen_id = request.data['hitmen_id']
         manager_id = request.data['manager_id']
-        
-        hitmen = get_object_or_404(Hitmen, pk=hitmen_id)
-        manager = User.objects.filter(is_manager=True, id=manager_id).first()
-        if not hitmen.is_active:
-            return Response(data={"message": "Can not assign to inactive users"}, status=status.HTTP_400_BAD_REQUEST)
 
-        hitmen.assigned_manager = manager
-        hitmen.save()
+        try:
+            hitmen = get_object_or_404(Hitmen, pk=hitmen_id)
+            manager = get_object_or_404(User, is_manager=True, id=manager_id)
+            print("Manager: ", manager)
+            if not hitmen.is_active:
+                return Response(data={"message": "Can not assign to inactive users"}, status=status.HTTP_400_BAD_REQUEST)
+
+            hitmen.assigned_manager = manager
+            hitmen.save()
+        except:
+            return Response(data={"message": "Error when assigning user, incorrect id for hitmen or manager"}, status=status.HTTP_400_BAD_REQUEST)
 
         return Response(data={"message": "Manager assigned"}, status=status.HTTP_200_OK)
 
