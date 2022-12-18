@@ -20,4 +20,14 @@ class UserPermission(BasePermission):
             return request.user.is_superuser or request.user.is_manager
 
         return False
-        
+
+class ManagerPermission(BasePermission):
+    """
+    Manager views permissions
+    """
+    def has_permission(self, request, view):
+        if not request.user.is_authenticated:
+            return False
+
+        if view.action == 'list':
+            return request.user.is_superuser

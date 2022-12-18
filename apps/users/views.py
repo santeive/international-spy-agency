@@ -4,7 +4,7 @@ User and ApiUser views
 
 from .models import Hitmen, User
 from .serializers import HitmenSignupSerializer, HitmenSerializer
-from .permissions import UserPermission
+from .permissions import UserPermission, ManagerPermission
 
 # Django
 from django.db.models import Q
@@ -95,4 +95,18 @@ class HitmenViewSet(GenericViewSet, ListModelMixin,
         hitmen.save()
 
         return Response(data={"message": "Manager assigned"}, status=status.HTTP_200_OK)
+
+class ManagerViewSet(GenericViewSet, ListModelMixin):
+    """
+    Viewset for Manager List operations for Boss
+    """
+    permission_classes = [IsAuthenticated, ManagerPermission]
+    queryset = User.objects.filter(is_manager=True)
+    serializer_class = HitmenSerializer
+
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_superuser:
+            queryset = super(ManagerViewSet, self).get_queryset()
+        return queryset
 
