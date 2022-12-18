@@ -4,6 +4,10 @@ User and ApiUser views
 
 from .models import Hitmen, User
 from .serializers import HitmenSignupSerializer, HitmenSerializer
+from .permissions import UserPermission
+
+# Django
+from django.db.models import Q
 
 #restframework
 from rest_framework.viewsets import GenericViewSet
@@ -13,16 +17,13 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework import status
-
 from rest_framework.mixins import (
     ListModelMixin, 
     RetrieveModelMixin,
     DestroyModelMixin,
     UpdateModelMixin
 )
-
 from rest_framework.permissions import IsAuthenticated
-from .permissions import UserPermission
 
 class AuthViewSet(GenericViewSet):
     """
@@ -70,10 +71,10 @@ class HitmenViewSet(GenericViewSet, ListModelMixin,
 
     def get_queryset(self):
         user = self.request.user
-        print("User: ", user)
-        print("Super User: ", user.is_superuser)
-
-        queryset = super(HitmenViewSet, self).get_queryset()
+        if user.is_manager:
+            queryset = Hitmen.objects.filter(assigned_manager=user)
+        else: #Boss
+            queryset = super(HitmenViewSet, self).get_queryset()
         return queryset
 
     @action(detail=False, methods=['post'])
@@ -91,5 +92,5 @@ class HitmenViewSet(GenericViewSet, ListModelMixin,
         hitmen.assigned_manager = manager
         hitmen.save()
 
-        return Response(data="Manager assigned", status=status.HTTP_200_OK)
+        return Response(data={"message": "Manager assigned"}, status=status.HTTP_200_OK)
 
