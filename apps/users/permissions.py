@@ -17,7 +17,7 @@ class UserPermission(BasePermission):
             return request.user.is_superuser
 
         if view.action in ['list', 'retrieve', 'update', 'partial_update']:
-            return True
-
+            return request.user.is_superuser or request.user.is_manager
 
         return False
+        

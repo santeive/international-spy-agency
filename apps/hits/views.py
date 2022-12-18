@@ -15,6 +15,7 @@ from rest_framework.mixins import (
 from django.db.models import Q
 # Integgrations
 from apps.users.models import User, Hitmen
+from .permissions import HitsPermission
 from .models import Hit
 from .serializers import HitSerializer
 from apps.users.serializers import UserBaseSerializer
@@ -22,7 +23,7 @@ from rest_framework.permissions import IsAuthenticated
 
 class HitsViewSet(GenericViewSet, ListModelMixin, 
     RetrieveModelMixin, DestroyModelMixin, UpdateModelMixin):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, HitsPermission]
     queryset = Hit.objects.all()
     serializer_class = HitSerializer
 

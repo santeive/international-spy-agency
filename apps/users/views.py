@@ -88,6 +88,8 @@ class HitmenViewSet(GenericViewSet, ListModelMixin,
 
         hitmen = Hitmen.objects.get(id=hitmen_id)
         manager = User.objects.filter(is_manager=True, id=manager_id).first()
+        if not hitmen.is_active:
+            return Response(data={"message": "Can not assign to inactive users"}, status=status.HTTP_400_BAD_REQUEST)
 
         hitmen.assigned_manager = manager
         hitmen.save()
