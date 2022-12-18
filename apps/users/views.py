@@ -90,7 +90,6 @@ class HitmenViewSet(GenericViewSet, ListModelMixin,
         try:
             hitmen = get_object_or_404(Hitmen, pk=hitmen_id)
             manager = get_object_or_404(User, is_manager=True, id=manager_id)
-            print("Manager: ", manager)
             if not hitmen.is_active:
                 return Response(data={"message": "Can not assign to inactive users"}, status=status.HTTP_400_BAD_REQUEST)
 
