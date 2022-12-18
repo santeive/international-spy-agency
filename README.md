@@ -71,7 +71,7 @@ make createsuperuser
 
 #### You can check the documentation at:
 ```
-http://0.0.0.0:8000/docs/
+http://localhost:8000/docs/
 ```
 
 Once the data is loaded, the users are these. 
