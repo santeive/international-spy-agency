@@ -3,3 +3,7 @@ djangorestframework
 requests
 python-dotenv
 psycopg2-binary
+djangorestframework-simplejwt
+factory-boy
+django-extensions
+drf-yasg
